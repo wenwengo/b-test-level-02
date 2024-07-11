@@ -28,12 +28,6 @@
         $("#content").load("./api/get_titles.php", {
             type
         })
-
-        /* $.get("./api/get_titles.php", {
-            type
-        }, (titles) => {
-            $("#content").html(titles)
-        }) */
     }
 
     function getNews(id) {
