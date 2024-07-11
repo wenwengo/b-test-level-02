@@ -19,6 +19,11 @@ $subject = $Que->find($_GET['id']);
 </fieldset>
 <script>
     function vote() {
-
+        let vote = $("input[type='radio']:checked").val()
+        $.post("./api/vote.php", {
+            vote
+        }, () => {
+            location.href = "?do=result&id=<?= $subject['id']; ?>"
+        })
     }
 </script>
